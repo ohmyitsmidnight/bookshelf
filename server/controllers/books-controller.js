@@ -50,9 +50,9 @@ exports.booksCreate = async (req, res) => {
 //Remove specific book
 exports.booksDelete = async (req, res) => {
     //Find specific boook in the database and remove it
-    knew('books')
+    knex('books')
         .where('id', req.body.id) // find correct record based on id
-        .del() // delet the record
+        .del() // delete the record
         .then(() => {
             //Send a success message in response 
             res.json({ message:`Book ${req.body.id} deleted.`})
@@ -63,10 +63,10 @@ exports.booksDelete = async (req, res) => {
         })
 }
 
-//Remove all ooks on the list
+//Remove all books on the list
 exports.booksReset = async (req, res) => {
     //Remove all books fro, database
-    knex
+    knex('books')
         .select('*') //select all records
         .from('books') //from 'books' table
         .truncate() //remove the selection

@@ -26,12 +26,12 @@ router.post('/create', booksRoutes.booksCreate)
 // Add route for PUT request to remove a specific book
 // In service.js, books route is specified as '/books'
 //  this means that '/delete' translates to 'books/delete
-router.put('delete', booksRoutes.booksDelete)
+router.put('/delete', booksRoutes.booksDelete)
 
 // Add route for PUT request to remove all books
 // In service.js, books route is specified as '/books'
 //  this means that '/reset' translates to 'books/reset
-router.put('reset', booksRoutes.booksReset)
+router.put('/reset', booksRoutes.booksReset)
 
 
 // Export router
