@@ -1,0 +1,3 @@
+/* 
+buildScript.js file which will contain build script for this app.
+*/
